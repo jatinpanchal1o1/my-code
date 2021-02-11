@@ -1,6 +1,5 @@
 # it use for end=""/ try without it also work;
-from __future__ import print_function     
-
+    
 # to take input from user;
 n = int(input("Enter the value: "))
 

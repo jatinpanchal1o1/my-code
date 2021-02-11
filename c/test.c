@@ -1,7 +1,17 @@
-#include<stdio.h> 
-int main() 
-{ 
-    int i = 1; 
-    printf("%d %d %d\n", ++i, i++, i); 
-    return 1; 
-} 
+main() {
+
+   FILE *fp;
+   char buff[255];
+
+   fp = fopen("/tmp/test.txt", "r");
+   fscanf(fp, "%s", buff);
+   printf("1 : %s\n", buff );
+
+   fgets(buff, 255, fp);
+   printf("2: %s\n", buff );
+   
+   fgets(buff, 255, fp);
+   printf("3: %s\n", buff );
+   fclose(fp);
+
+}

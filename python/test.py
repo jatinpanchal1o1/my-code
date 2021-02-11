@@ -1,13 +1,11 @@
-#for end="";
-from __future__ import print_function
-
+n=0
 #for input;
-n = int(input("Enter the value: "))
-
+while n<=0:
+    n = int(input("Enter the value: "))
 #for loop
-j = 0
-for i in range(n):
-    while j<=i:
+for i in range(n,0,-1):
+    for j in range(i):
+        print(" ", end="")     
+    for k in range(0,n):
         print("#", end="")
-        j += 1
     print()    
