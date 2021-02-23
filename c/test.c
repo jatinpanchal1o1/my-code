@@ -1,19 +1,25 @@
 #include<stdio.h>
 
-main() {
+int *fun()
 
-   FILE *fp;
-   char buff[255];
+{
 
-   fp = fopen("/tmp/test.txt", "r");
-   fscanf(fp, "%s", buff);
-   printf("1 : %s\n", buff );
+   int y= 15;
 
-   fgets(buff, 255, fp);
-   printf("2: %s\n", buff );
-   
-   fgets(buff, 255, fp);
-   printf("3: %s\n", buff );
-   fclose(fp);
+   return &y;
+
+}
+
+int main()
+
+{
+
+    int *p = fun();
+
+    fflush(stdin);
+
+printf("%d", *p);
+
+return 0;
 
 }
